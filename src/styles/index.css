@@ -1,0 +1,10 @@
+@import "../assets/theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-white);
+}
