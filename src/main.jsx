@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './styles/index.css'
+import './assets/index.css'
 import App from './App.jsx'
 
 // Punto de entrada: monta la aplicación React en el DOM.
