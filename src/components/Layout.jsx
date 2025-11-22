@@ -14,8 +14,6 @@ import Footer from "./Footer";
 export default function Layout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Skip link visible on keyboard focus */}
-      <a href="#page-main" className="skip-link">Saltar al contenido</a>
       <Header />
       <main id="page-main" className="flex-grow">{children}</main>
       <Footer />

@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 
+/**
+ * InicioPage
+ * ---------
+ * Página de inicio (hero) con un título de bienvenida y un CTA hacia
+ * `/productos`.
+ *
+ * Objetivo: presentar el sitio y dirigir al usuario a la lista de productos.
+ * Este bloque es puramente presentacional; no se cambió ninguna lógica.
+ */
 export default function InicioPage() {
   return (
     <Layout>

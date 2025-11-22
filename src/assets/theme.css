@@ -101,6 +101,13 @@
   box-shadow: var(--dropshadow);
 }
 
+/* Visible focus ring utility for primary interactive elements */
+.focus-ring-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(4,80,151,0.12);
+  border-radius: 9999px;
+}
+
 /* Fondo global de la página usando la variable del tema */
 body {
   background-color: var(--color-grey-5);

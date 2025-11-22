@@ -37,22 +37,23 @@ export default function ProductDetailPage() {
             <div style={{ backgroundColor: 'var(--color-grey-5)', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <article className="w-full max-w-6xl bg-white rounded-lg shadow-custom" style={{ padding: '4.5rem 2rem' }}>
                 {/* Back button was here but moved into the details column to avoid overlapping the image */}
-                <div className="mb-8">
-                  <Link
-                    to="/productos"
-                    aria-label="Volver a la lista de productos"
-                    title="Volver a la lista de productos"
-                    className="inline-block rounded-full font-semibold transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                    style={{
-                      background: 'linear-gradient(180deg, rgba(6,110,204,1) 0%, rgba(3,60,114,1) 100%)',
-                      color: 'var(--color-white)',
-                      padding: '10px 22px',
-                      boxShadow: '0 6px 20px rgba(4,80,151,0.25)'
-                    }}
-                  >
-                    Volver
-                  </Link>
-                </div>
+                  <div className="mb-8">
+                    <Link
+                      to="/productos"
+                      aria-label="Volver a la lista de productos"
+                      title="Volver a la lista de productos"
+                      tabIndex={0}
+                      className="inline-block rounded-full font-semibold transition-transform transform hover:scale-105 focus:outline-none focus-ring-primary"
+                      style={{
+                        background: 'linear-gradient(180deg, rgba(6,110,204,1) 0%, rgba(3,60,114,1) 100%)',
+                        color: 'var(--color-white)',
+                        padding: '10px 22px',
+                        boxShadow: '0 6px 20px rgba(4,80,151,0.25)'
+                      }}
+                    >
+                      Volver
+                    </Link>
+                  </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                   {/* Imagen */}

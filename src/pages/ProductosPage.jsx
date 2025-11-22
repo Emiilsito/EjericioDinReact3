@@ -2,6 +2,16 @@ import Layout from "../components/Layout";
 import ProductList from "../components/ProductList";
 import { productos } from "../data/productos";
 
+/**
+ * ProductosPage
+ * ----------------
+ * Página que muestra la lista de productos dentro de una tarjeta centrada.
+ * - Usa `ProductList` para renderizar la rejilla de productos.
+ * - Mantiene la tarjeta blanca centrada con padding y títulos.
+ *
+ * Nota: Solo se añade documentación inline aquí; no se modifica la lógica ni
+ * el layout existente.
+ */
 export default function ProductosPage() {
   return (
     <Layout>

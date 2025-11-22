@@ -2,20 +2,33 @@ import { Link, useLocation } from "react-router-dom";
 
 /**
  * Header
- * Header de la aplicación que contiene la marca y la navegación principal.
- * Props:
- *  - onNavigate?: (path: string) => void  // callback opcional cuando se pulsa un enlace de navegación
+ * --------
+ * Componente que representa el encabezado global de la aplicación.
+ * Contiene la marca (GameZone) y la navegación principal en dos variantes
+ * (menú pequeño en mobile y menú en la derecha en desktop).
  *
- * Comportamiento:
- *  - Renderiza enlaces de navegación usando react-router `Link`.
- *  - Si se pasa `onNavigate`, se llama con la ruta cuando se hace click en un enlace.
+ * Props:
+ *  - onNavigate?: (path: string) => void
+ *      Callback opcional que se invoca con la ruta cuando el usuario hace
+ *      click en un enlace. Útil para tracking o comportamiento adicional.
+ *
+ * Accesibilidad:
+ *  - Los enlaces de navegación usan `aria-current="page"` cuando corresponda
+ *    para indicar la página activa.
+ *  - La navegación de escritorio está marcada con `role="navigation"` y
+ *    `aria-label` para que sea detectable por AT.
+ *
+ * Notas de implementación:
+ *  - El componente usa variables de tema para colores (p. ej. `--color-white`).
+ *  - Mantener el título dentro del flujo (no absoluto) facilita la navegación
+ *    por teclado y evita problemas con el orden del DOM.
  */
 export default function Header({ onNavigate }) {
   const location = useLocation();
   const path = location.pathname;
 
   return (
-    <header className="site-header shadow-custom relative" style={{ backgroundColor: 'var(--color-primary)' }}>
+  <header className="site-header shadow-custom relative flex items-center" style={{ backgroundColor: 'var(--color-primary)' }}>
   <div className="max-w-6xl mx-auto px-6 flex items-center">
           <div className="flex items-center mr-auto">
             <h1 className="text-h5 leading-none" style={{ color: 'var(--color-white)' }}>
